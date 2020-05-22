@@ -16,6 +16,7 @@ limitations under the License.
 package delete
 
 import (
+	"github.com/opencord/voltadm/internal/pkg/cmds/delete/cluster"
 	"github.com/opencord/voltadm/internal/pkg/cmds/delete/env"
 	"github.com/opencord/voltadm/internal/pkg/cmds/delete/stack"
 	"github.com/spf13/cobra"
@@ -33,6 +34,7 @@ func NewCommand() *cobra.Command {
 
 	deleteCmd.AddCommand(env.NewCommand())
 	deleteCmd.AddCommand(stack.NewCommand())
+	deleteCmd.AddCommand(cluster.NewCommand())
 
 	return deleteCmd
 }

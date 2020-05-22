@@ -5,7 +5,6 @@ import (
 	"github.com/opencord/voltadm/internal/pkg/cmds/create"
 	"github.com/opencord/voltadm/internal/pkg/cmds/delete"
 	"github.com/opencord/voltadm/internal/pkg/cmds/get"
-	"github.com/opencord/voltadm/internal/pkg/cmds/list"
 	"github.com/spf13/cobra"
 )
 
@@ -24,7 +23,6 @@ Kubernetes cluster.`,
 	}
 	cmd.AddCommand(create.NewCommand())
 	cmd.AddCommand(delete.NewCommand())
-	cmd.AddCommand(list.NewCommand())
 	cmd.AddCommand(get.NewCommand())
 	cmd.AddCommand(completion.NewCommand())
 	return cmd

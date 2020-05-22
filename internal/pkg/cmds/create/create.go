@@ -16,6 +16,7 @@ limitations under the License.
 package create
 
 import (
+	"github.com/opencord/voltadm/internal/pkg/cmds/create/cluster"
 	"github.com/opencord/voltadm/internal/pkg/cmds/create/env"
 	"github.com/opencord/voltadm/internal/pkg/cmds/create/stack"
 	"github.com/spf13/cobra"
@@ -33,6 +34,7 @@ func NewCommand() *cobra.Command {
 
 	createCmd.AddCommand(env.NewCommand())
 	createCmd.AddCommand(stack.NewCommand())
+	createCmd.AddCommand(cluster.NewCommand())
 
 	return createCmd
 }

@@ -16,6 +16,7 @@ limitations under the License.
 package get
 
 import (
+	"github.com/opencord/voltadm/internal/pkg/cmds/get/clusters"
 	"github.com/opencord/voltadm/internal/pkg/cmds/get/env"
 	"github.com/opencord/voltadm/internal/pkg/cmds/get/stack"
 	"github.com/spf13/cobra"
@@ -33,6 +34,7 @@ func NewCommand() *cobra.Command {
 
 	getCmd.AddCommand(env.NewCommand())
 	getCmd.AddCommand(stack.NewCommand())
+	getCmd.AddCommand(clusters.NewCommand())
 
 	return getCmd
 }

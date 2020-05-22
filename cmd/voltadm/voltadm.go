@@ -17,8 +17,10 @@ package main
 
 import (
 	"github.com/opencord/voltadm/internal/pkg/cmds"
+	"github.com/spf13/viper"
 )
 
 func main() {
+	viper.SetEnvPrefix("")
 	_ = cmds.GetRootCommand().Execute()
 }
